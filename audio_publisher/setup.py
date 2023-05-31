@@ -20,7 +20,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'file = audio_publisher.file_publisher:main',
             'stream = audio_publisher.stream_publisher:main'
         ],
     },
