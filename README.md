@@ -28,4 +28,5 @@
 - STT 모델을 audio subscriber에 넣어 stt_subscriber 모듈을 만들어 봤는데, 주피터로 음성을 녹음해서 해독시켰을 때는 정상 해독했으나
   callback함수로 chunk를 모으다 보내는 방식으로 해봤더니 이상하게 번역하는 문제 발생
   subscriber쪽 문제일텐데 어떻게 수정해야 제대로 알아들을지 감이 안온다..
-  - Hello라고 말하는데 I'm Sorry라고 
+  - Hello라고 말하는데 I'm Sorry라고 해석한다.
+ 
