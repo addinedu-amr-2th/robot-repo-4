@@ -1,0 +1,8 @@
+# Request:
+uint32 timestamp # ROS timestamp in miliseconds
+string command_name
+float32 command_value 0.0
+---
+# Response
+float32 value 0
+string message ""

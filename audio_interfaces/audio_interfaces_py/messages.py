@@ -1,0 +1,178 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+messages.py: ROS-message to and from numpy-array conversions.
+"""
+
+import numpy as np
+
+from geometry_msgs.msg import PoseStamped, Point, Quaternion
+
+from audio_interfaces.msg import (
+    Signals,
+)
+from audio_interfaces.msg import PoseRaw
+
+from builtin_interfaces.msg import Time
+
+
+def get_quaternion(yaw_deg, pitch_deg=0, roll_deg=0):
+    from scipy.spatial.transform import Rotation
+
+    r = Rotation.from_euler("xyz", [pitch_deg, roll_deg, yaw_deg], degrees=True)
+    r_quat = r.as_quat()
+    return Quaternion(x=r_quat[0], y=r_quat[1], z=r_quat[2], w=r_quat[3])
+
+
+def fill_header(msg, timestamp_ms):
+    sec, nanosec = convert_ms_to_sec_nanosec(timestamp_ms)
+    msg.header.stamp.sec = sec
+    msg.header.stamp.nanosec = nanosec
+    msg.header.frame_id = "global"
+
+
+def convert_ms_to_sec_nanosec(timestamp_ms):
+    sec = int(timestamp_ms // 1000)
+    nanosec = int(round(timestamp_ms * 1e6 - sec * 1e9))
+    return sec, nanosec
+
+
+def convert_sec_nanosec_to_ms(sec, nanosec):
+    return int(round(sec * 1e3 + nanosec * 1e-6))
+
+
+def convert_stamp_to_ms(stamp):
+    return convert_sec_nanosec_to_ms(stamp.sec, stamp.nanosec)
+
+
+def create_pose_message(x, y, z, yaw_deg, timestamp_ms=None, **dump):
+    """ Create PoseStamped message. """
+    msg = PoseStamped()
+
+    if timestamp_ms is not None:
+        fill_header(msg, timestamp_ms)
+
+    msg.pose.position = Point(x=x, y=y, z=z)
+    msg.pose.orientation = get_quaternion(yaw_deg)
+    return msg
+
+
+def create_pose_message_from_arrays(quat, position, timestamp=None):
+    """ Create PoseStamped message. """
+    msg = PoseStamped()
+
+    if timestamp is not None:
+        fill_header(msg, timestamp)
+
+    msg.pose.position = Point(x=position[0], y=position[1], z=position[2])
+    msg.pose.orientation = Quaternion(x=quat[0], y=quat[1], z=quat[2], w=quat[3])
+    return msg
+
+
+def create_pose_raw_message(
+    x, y, z, yaw_deg, timestamp, yaw_rate_deg=0, vx=0, vy=0, **dump
+):
+    """ Create PoseRaw message. """
+    msg = PoseRaw(
+        vx=float(vx),
+        vy=float(vy),
+        x=float(x),
+        y=float(y),
+        z=float(z),
+        yaw_deg=float(yaw_deg),
+        yaw_rate_deg=float(yaw_rate_deg),
+        timestamp=timestamp,
+    )
+    return msg
+
+
+def create_signals_message(signals, mic_positions, timestamp, fs):
+    """ Create Signals message. """
+    msg = Signals()
+    msg.timestamp = timestamp
+    msg.fs = fs
+    msg.n_buffer = signals.shape[1]
+    # this is very unlikely to happen and is
+    # probably due to signals having the wrong shape.
+    msg.signals_vect = list(signals.flatten().astype(float))
+    if mic_positions is not None:
+        msg.mic_positions = list(mic_positions.flatten().astype(float))
+    else:
+        msg.mic_positions = []
+    return msg
+
+
+def read_distribution_message(msg):
+    distances = np.array(msg.values)
+    probs = np.array(msg.probabilities)
+    assert msg.n == len(probs)
+    assert msg.n == len(distances)
+    return distances, probs
+
+
+def read_pose_message(msg):
+    """ Read Pose message.  """
+    from scipy.spatial.transform import Rotation
+
+    new_position = np.array(
+        (msg.pose.position.x, msg.pose.position.y, msg.pose.position.z)
+    )
+    quat = [
+        msg.pose.orientation.x,
+        msg.pose.orientation.y,
+        msg.pose.orientation.z,
+        msg.pose.orientation.w,
+    ]
+    r = Rotation.from_quat(quat)
+    yaw, pitch, roll = r.as_euler("zyx", degrees=True)
+    return new_position, yaw, pitch, roll
+
+
+def read_pose_raw_message(msg):
+    """ Read PoseRaw message.  """
+    from scipy.spatial.transform import Rotation
+
+    v_local = np.array((msg.vx, msg.vy, 0))
+    r_world = np.array((msg.x, msg.y, msg.z))
+    yaw = msg.yaw_deg
+    yaw_rate = msg.yaw_rate_deg
+    r = Rotation.from_euler("z", yaw, degrees=True)
+    v_world = r.apply(v_local)[:2]
+    return r_world, v_world, yaw, yaw_rate
+
+
+def read_signals_message(msg):
+    """ Read Signals message.  """
+    mic_positions = np.array(msg.mic_positions).reshape((1, -1))
+    signals = np.array(msg.signals_vect)
+    signals = signals.reshape(msg.n_buffer)
+    return mic_positions, signals
+
+
+def read_signals_freq_message(msg):
+    """ Read SignalsFreq message.  """
+    mic_positions = np.array(msg.mic_positions).reshape((1, -1))
+    signals_f = np.array(msg.signals_real_vect) + 1j * np.array(msg.signals_imag_vect)
+    signals_f = signals_f.reshape((1, msg.n_frequencies)).T
+    freqs = np.array(msg.frequencies)
+    return mic_positions, signals_f[freqs > 0, :], freqs[freqs > 0]
+
+
+def read_correlations_message(msg):
+    """ Read Correlations message. """
+    if msg.mic_positions:
+        mic_positions = np.array(msg.mic_positions).reshape((1, -1))
+    else:
+        mic_positions = None
+    frequencies = np.array(msg.frequencies).astype(np.float)  # [10, 100, 1000]
+    R = np.array(msg.corr_real_vect) + 1j * np.array(msg.corr_imag_vect)
+    R = R.reshape((len(frequencies), 1, 1))
+    return mic_positions, R, frequencies
+
+
+def read_spectrum_message(msg):
+    """ Read Spectrum message. """
+    spectrum = np.array(msg.spectrum_vect).reshape((msg.n_frequencies, msg.n_angles))
+    frequencies = np.array(msg.frequencies)
+    theta_scan = np.linspace(0, 360, msg.n_angles)
+    return spectrum, frequencies, theta_scan
