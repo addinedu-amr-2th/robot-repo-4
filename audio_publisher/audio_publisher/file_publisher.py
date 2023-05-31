@@ -17,7 +17,6 @@ N_BUFFER = 2048
 
 # for older datsets only.
 current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.abspath(current_dir + "/../../../crazyflie-audio/python/"))
 import file_parser as fp
 
 GT_DEGREES = 20
@@ -50,11 +49,6 @@ class FilePublisher(AudioPublisher):
         # for old datasets only
         if file_source in fp.parameters.keys():
             Fs = fp.parameters[file_source]["Fs"]
-        else:
-            sys.path.append(f"experiments/{file_source}/")
-            from params import global_params
-
-            Fs = global_params["fs_soundcard"]
 
         super().__init__(
             "file_publisher",
