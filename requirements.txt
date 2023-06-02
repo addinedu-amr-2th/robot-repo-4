@@ -1,3 +1,5 @@
+# audio publisher & subsciber
+pyaudio
 sounddevice
 soundfile
 whisper
