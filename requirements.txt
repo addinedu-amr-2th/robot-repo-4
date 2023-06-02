@@ -1,3 +1,5 @@
 sounddevice
 soundfile
 whisper
+librosa
+noisereduce
