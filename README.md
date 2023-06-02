@@ -25,3 +25,11 @@
    - 뎁스카메라를 이용 정확한 물체 매핑
 ---
 
+# Schedule
+### short vacation
+1. project goal (senario)
+2. gpt price research + finetunning
+
+### complete(5.31)
+1.usbMIC pub,echo+STT(realtime?)
+2.movements
