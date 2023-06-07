@@ -27,3 +27,6 @@
 ## 팀원 소개
 - [송승훈](https://github.com/addinedu-amr-2th/robot-repo-4/tree/ssh)
 - [윤태웅](https://github.com/addinedu-amr-2th/robot-repo-4/tree/ytw)
+
+## Required
+- [controller_interface](https://github.com/ros-controls/ros2_control/tree/master) >> pinklab_minibot_robot 디렉토리에
