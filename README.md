@@ -1,6 +1,5 @@
-# Project schedule
+# Project Goal
 
-다음의 목록을 가능한 만큼 애자일 방식으로 개발해 나갈 생각이다.
 1. audio publish & subscribe
 2. 음성으로 조작되는 로봇
 3. 기본적인 로봇 기능 구현
