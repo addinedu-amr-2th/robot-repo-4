@@ -1,6 +1,7 @@
 ## 프로젝트 소개
 거대 언어 모델 **ChatGPT**를 이용한 로봇 행동 제어 프로젝트  
 ## 시연 영상
+https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4d25-b1f7-6d03d8f8011c
 
 ## 목적
 - AGI로도 생각되는 거대 언어 모델(LLM)인 ChatGPT를 사용하여 사용자의 요청을 해결하는 로봇의 적절한 논리적인 행동리스트를 스스로 판단, 생성시켜보자.
