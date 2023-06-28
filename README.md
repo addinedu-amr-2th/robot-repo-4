@@ -3,6 +3,10 @@
 #### audio_interfaces
 - audioROS로부터 나온 음성 데이터 교환을 위한 데이터형 정의 인터페이스
 #### audio_publisher
+- audioROS의 stream 노드만 남기고 음성 송수신에 맞도록 여러 파라미터를 수정한 음성 송신 패키지
+#### audio_subscriber
+- audio_subscriber : audioROS의 주파수 영역으로 음원을 변환하는 노드를 수정하여 수신한 음성을 그대로 재생하도록 만든 노드
+- stt_subscriber : 위의 코드에 Whispher 모델을 적용하여 음성을 재생하는 대신 transcribe하게 만든 노드
 ### 스케쥴 메이커 초안
 #### action_maker
 # ROS 프로젝트 개발일지
