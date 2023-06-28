@@ -11,7 +11,9 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ## 프로젝트 설명  
 ![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/50715f88-4995-45c1-b898-55eb4362f75f)
 - 전체 시스템 구성도 : 사용자의 음성을 언어모델인 ChatGPT에 입력시키기 위해 google STT API를 사용, finetuning된 GPT 모델에 사용자의 요청에 해당하는 프롬프트를 넣고, 그 출력으로 나온 일련의 동작 시퀀스인 스케쥴을 스케쥴러에서 하나씩 parsing하여 여러 하드웨어들을 제어할 수 있도록 한다.
--  
+
+## 의의
+
 ---
 ## 코드 설명
 #### schedule_maker : 
