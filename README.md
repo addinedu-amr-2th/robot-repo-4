@@ -8,8 +8,9 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 - AGI로도 생각되는 **거대 언어 모델(LLM)인 ChatGPT**를 사용하여 사용자의 요청을 해결하는 **로봇의 적절한 논리적인 행동리스트를 스스로 판단, 생성**시켜보자.
 - 대화와 감정을 만들어 낼 수 있는 ChatGPT의 특성을 강조하여 인간과 로봇의 교감에 초점을 맞춘다.
 - 기존에 없던 **ChatGPT를 이용해 로봇을 제어하는 새로운 프레임 워크** 개발
-## 프로젝트 설명
-
+## 프로젝트 설명  
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/50715f88-4995-45c1-b898-55eb4362f75f)
+- 전체 시스템 구성도 : 사용자의 음성을 finetuning된 GPT 모델에 넣기 위해 google STT TTS API를 사용, 
 ---
 ## 코드 설명
 #### schedule_maker : 
