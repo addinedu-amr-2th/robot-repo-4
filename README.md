@@ -27,7 +27,11 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ---
 ![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/1b09d285-7a48-4bc1-a114-fd63e38ba4dc)
 - 이렇게 얻어진 행동 시퀀스는 Schedule Manager에 의해 ChatGPT 모델이 판단한 우선도에 따라 기존 스케쥴의 전방/후방에 배치되게 되고, Schedule Manager는 이를 하나씩 꺼내어 하드웨어에 명령을 내리고, 이 명령이 수행된 후 성공 여부를 나타내는 신호를 받아 이를 통해 하나의 동작의 완료를 인식하고 다음 동작을 순차적으로 실행하여 일련의 동작이 수행될 수 있게 하였다.
-- 이론상 모든 복잡한 동작은 간단한 동작의 연속으로 구성되어 있으므로, 이는 ChatGPT가 사용자의 요구를 만족시키는 복잡한 동작들을 스스로 생성해냄을 의미한다. 
+- 이론상 모든 복잡한 동작은 간단한 동작의 연속으로 구성되어 있으므로, 이는 ChatGPT가 사용자의 요구를 만족시키는 복잡한 동작들을 스스로 생성해냄을 의미한다.
+---
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/c1d2967f-4e4f-4783-9bb9-acd19d5cab1d)
+- 위는 구체적인 동작의 예시이다.
+---
 ## 의의
 
 
