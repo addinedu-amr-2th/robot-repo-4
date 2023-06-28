@@ -15,7 +15,7 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 #### yolo_pkg : 
 #### om_pkg : 
 ## 발표 자료
-- 발표 PPT
+- [발표 PPT](https://docs.google.com/presentation/d/1Db-Mb1rRizueh5NoOPT9ax4vFm7Z98R1q-yJYuG1zGs/edit?usp=sharing)
 ## 팀원 소개
 팀 GPT와 함께 춤을~
 - [송승훈](https://github.com/addinedu-amr-2th/robot-repo-4/tree/ssh)
