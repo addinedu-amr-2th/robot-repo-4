@@ -11,11 +11,11 @@
 #### action_maker
 - action_maker : ChatGPT의 출력 스케쥴 텍스트를 parsing하여 단순하게 순차적으로 동작을 수행하는 스케쥴러 초안
 ### 스케쥴 메이커
-#### schedule_maker
+#### **schedule_maker**
 - ch36_to_ch4, ch4_to_ch36 : 두 ROS DOMAIN ID 간 정보를 교환하는 중계노드
 - **schedule_maker** : 최종 제작한 스케쥴러 노드
 ### 음성 처리
-#### stt_pkg
+#### **stt_pkg**
 - **gpt_agent** : 다양한 GPT 모델을 우리 프로젝트 목적에 맞게 사용해서 요청에 대응하는 스케쥴을 생성하게 하는 노드
 - tts_pub : 태웅씨가 만든 tts_origin을 패키지화 & 특정 키워드에 맞는 음악을 재생하는 기능 추가
 - 그 외의 부분은 태웅씨가 작성한 패키지이다.  
