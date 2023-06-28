@@ -31,6 +31,9 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ---
 ![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/c1d2967f-4e4f-4783-9bb9-acd19d5cab1d)
 - 위는 구체적인 동작의 예시이다.
+- 사용자가 목이 마르다는 요청을 넣게 되면, ChatGPT는 이를 해소하기 위해 우선도를 높음으로 설정한 뒤, 
+  병을 찾기, 병을 바라봄, 앞으로 감, 물병을 잡음, 사람을 찾음, 사람을 바라봄, 앞으로 감, 병을 내려놓음, 행복을 표현함의 일련의 과정을출력으로 내놓는다.
+   
 ---
 ## 의의
 
