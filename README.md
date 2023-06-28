@@ -1,5 +1,10 @@
 # 코드 소개
-
+### 음성 처리 초안
+#### audio_interfaces
+- audioROS로부터 나온 음성 데이터 교환을 위한 데이터형 정의 인터페이스
+#### audio_publisher
+### 스케쥴 메이커 초안
+#### action_maker
 # ROS 프로젝트 개발일지
 ### 사전 준비
 - 원래 [Deepspeech stt 모델](https://github.com/sooftware/kospeech)을 이용하여 학습해 사용하려 했으나, 컴퓨팅 파워 부족으로 [이미 학습되어 있는 딥러닝 모델](https://github.com/openai/whisper)을 사용하기로 결정. 성능은 양호해보인다. 
