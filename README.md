@@ -47,12 +47,13 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ## 회고
 - ChatGPT를 사용하는 논문들의 경우, 성능의 문제로 ChatGPT4를 주로 사용하는데, ChatGPT4의 경우 신청 후 허가받은 계정만이 사용 가능하기 때문에 기한 문제로 해당프로젝트에선 테스트해보지 못했다.
 - 학습데이터로 자신이 누구고 어떤 상황인가에 대홰 로봇의 문법으로 대화하는 형식으로 구성된 기초지식 분야, 기초적인 행동 노드들을 하나씩 실행하는 기초동작 분야, 추상적인 요청에 복잡한 동작으로 대응해야 하는 복잡한 행동 분야의 세 분야의 데이터를 사용했는데, 각각의 데이터의 영향에 대해서는 아직 판단하지 못했다.
+- Schedule Manager와 로봇 제어 노드를 분리했어야 했는데 그러지못했다. 때문에 코드 디버깅에 어려움이 있었다. 
 
 ## 코드 설명
-#### schedule_maker : 
-#### stt_pkg : 
-#### yolo_pkg : 
-#### om_pkg : 
+#### stt_pkg : 음성 처리 및 ChatGPT와 관련된 패키지 
+#### schedule_maker : 행동 시퀀스 스케쥴을 관리하고 로봇 구동부를 제어하는 패키지
+#### yolo_pkg : YOLO 모델의 정보를 schedule_maker 및 로봇팔 제어부에 전달해주는 패키지
+#### om_pkg : ChatGPT 명령에 의해 로봇팔을 제어하는 패키지
 ## 발표 자료
 - [발표 PPT](https://docs.google.com/presentation/d/1Db-Mb1rRizueh5NoOPT9ax4vFm7Z98R1q-yJYuG1zGs/edit?usp=sharing)
 ## 팀원 소개
