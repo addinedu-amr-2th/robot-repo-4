@@ -35,13 +35,17 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
   병을 찾기, 병을 바라봄, 앞으로 감, 물병을 잡음, 사람을 찾음, 사람을 바라봄, 앞으로 감, 병을 내려놓음, 행복을 표현함의 일련의 과정을 출력으로 내놓는다.
 - Schedule Manager는 이를 하나씩 다른 기기들에게 명령하게되고, 이로서 사용자의 요청에 대응하는 복잡한 동작이 이루어지게 된다.
 ---
-
 그 결과 우리는 다음과 같이 사람과 친밀하게 상호작용하는 로봇을 만들 수 있었다.
 ![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/bf2a6e62-4831-43ac-bad3-9dc18b3c0750)
 ![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/c0a09812-fd23-4f6f-84f5-5903df42e91b)
 ![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/2968b2dd-470a-4d24-a221-27264b53c262)
 ## 의의
-
+- 우리는 음성으로 소통하는 사람과 교감하는 로봇에 초점을 맞췄으나, 사용자의 요청에 맞는 일련의 실제동작을 만들어낸다는 점에서 교감 목적이 아닌, 음성 소통 방식이 아닌 로봇에도 위와 같은 방식의 프레임 워크를 사용할 수 있을 것이다.
+- 이론상 ChatGPT3.5와 GPT3의 차이점은 양질의 대량 finetuning data이다. 
+  즉, 양질의 데이터만 충분히 제공한다면 우리가 한 단순한 동작을 만드는 방법이 아닌 모터 등의 파라미터를 직접 조절하는 방식도 가능할 것으로 생각되며, 더 나아가서 그 자리에서 코드를 직접 작성하여 행동 노드조차 사람이 만들 필요가 없게 되는 시점까지도 갈 수 있을 지도 모른다.
+- 인공지능을 적용하기 쉽지 않은 판단 영역에 대해서 거대 언어모델을 통해 유연한 행동제어가 가능할거라 기대하는게 가능할 것이다.
+## 회고
+- 
 
 ## 코드 설명
 #### schedule_maker : 
@@ -51,7 +55,7 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ## 발표 자료
 - [발표 PPT](https://docs.google.com/presentation/d/1Db-Mb1rRizueh5NoOPT9ax4vFm7Z98R1q-yJYuG1zGs/edit?usp=sharing)
 ## 팀원 소개
-팀 GPT와 함께 춤을~
+팀 **ChatGPT와 함께 춤을~**
 - [송승훈](https://github.com/addinedu-amr-2th/robot-repo-4/tree/ssh)
 - [윤태웅](https://github.com/addinedu-amr-2th/robot-repo-4/tree/ytw)
 
