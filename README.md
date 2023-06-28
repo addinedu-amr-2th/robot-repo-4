@@ -16,7 +16,9 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 - finetuning : OpenAI에서 제공하는 서비스를 통해 입력 `prompt`와 모범답안 `completion`의 한 쌍으로 GPT 모델을 finetuning시켜 학습데이터의 말투, 문법, 스타일을 사용하는 나만의 GPT 모델을 만들 수 있다.
 - 우리는 일련의 행동을 언어로 규정하기 위해서 기기, 행동, 파라미터를 콜론(:) 마크로, 동작과 동작 단위를 별(*) 마크로 정의하여 이를 기준으로 출력 스케쥴을 parsing할 수 있었다.
 ---
-
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/25b1b54c-73ec-4eae-bad2-941725adcc03)
+- 우리는 최적의 성능을 얻기 위해 위와 같은 기법들을 사용했다.
+- 
 ## 의의
 
 
