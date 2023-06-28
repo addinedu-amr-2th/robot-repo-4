@@ -6,9 +6,10 @@
 - audioROS의 stream 노드만 남기고 음성 송수신에 맞도록 여러 파라미터를 수정한 음성 송신 패키지
 #### audio_subscriber
 - audio_subscriber : audioROS의 주파수 영역으로 음원을 변환하는 노드를 수정하여 수신한 음성을 그대로 재생하도록 만든 노드
-- stt_subscriber : 위의 코드에 Whispher 모델을 적용하여 음성을 재생하는 대신 transcribe하게 만든 노드
+- stt_subscriber : 위의 코드에 Whispher 모델을 적용하여 음성을 재생하는 대신 transcribe하게 만든 노드. 동작 확인을 위해 특정 단어가 나올 경우 우리가 정의한 문법에 맞게 변환해서 발행하도록 했다.
 ### 스케쥴 메이커 초안
 #### action_maker
+- ChatGPT의 출력 스케쥴 텍스트를 parsing하여 단순하게 순차적으로 동작을 수행하는 스케쥴러 초안
 # ROS 프로젝트 개발일지
 ### 사전 준비
 - 원래 [Deepspeech stt 모델](https://github.com/sooftware/kospeech)을 이용하여 학습해 사용하려 했으나, 컴퓨팅 파워 부족으로 [이미 학습되어 있는 딥러닝 모델](https://github.com/openai/whisper)을 사용하기로 결정. 성능은 양호해보인다. 
