@@ -51,9 +51,20 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 
 ## 코드 설명
 #### stt_pkg : 음성 처리 및 ChatGPT와 관련된 패키지 
+- audio_pub : 
+- audio_sub : 
+- stt_sub : 
+- tts_pub : 
+- gpt_agent : 
 #### schedule_maker : 행동 시퀀스 스케쥴을 관리하고 로봇 구동부를 제어하는 패키지
+- ch36_to_ch4, ch4_to_ch36 : 
+- schedule_maker : 
 #### yolo_pkg : YOLO 모델의 정보를 schedule_maker 및 로봇팔 제어부에 전달해주는 패키지
+- cam_pub : 
+- cam_sub : 
+- yolo_publisher : 
 #### om_pkg : ChatGPT 명령에 의해 로봇팔을 제어하는 패키지
+- om_teleopkey : 
 ## 발표 자료
 - [발표 PPT](https://docs.google.com/presentation/d/1Db-Mb1rRizueh5NoOPT9ax4vFm7Z98R1q-yJYuG1zGs/edit?usp=sharing)
 ## 팀원 소개
