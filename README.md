@@ -112,3 +112,10 @@ test 결과 fine tuning 후에는 옳바른 사용을 한다는 가정하에 학
 ### 2023.6.21
 - ChatGPT 리서치.
 - ChatGPT(GPT 3.5 /GPT 4)는 ChatCompletion이라는 엔드포인트로, GPT3 (Ada, Babbage, Curie, Davinci)는 Completion이라는 엔드포인트로 동작한다.
+- 결과 작동방식, 사용 데이터, 파라미터가 전부 다르기에 GPT 노드는 사용하는 모델에 따라 별도의 클래스를 사용한다.
+  - ChatGPT의 경우, `system` 키워드를 통해 역할을 부여하는 방식. 논리적이고 지성이 느껴지나, 알려준 문법에서 탈출하는 문제가 잦다.
+  - GPT3의 경우 `Fewshot-learning'을 통해 예시를 들어주면 스타일을 따라하는 방식. 문법은 잘 지키나, 논리성을 보기 힘들다.
+- GPT3과 ChatGPT3.5의 경우 기본적으로 차이는 어마어마한 양의 finetuning데이터라고 한다.
+모델의 성능은 finetuing을 할 경우 압도적으로 증가하고, fewshot learning을 하면 더욱 압도적으로 증가한다고 한다.
+GPT4의 경우 모델부터 근본적으로 달라서 전문성이 다른 여러 LLM의 앙상블 같은 구조라고 한다.
+다른 ChatGPT 사용 논문들에서 GPT4 + fewshot learning을 사용하는 것으로 보아 성능은 압도적으로 보이나 GPT4의 API는 신청 후 통과 절차를 밟아야만 사용 가능하다. 우리 프로젝트 기간 내에는 절대 사용 불가
