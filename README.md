@@ -15,8 +15,10 @@
 - ch36_to_ch4, ch4_to_ch36 : 두 ROS DOMAIN ID 간 정보를 교환하는 중계노드
 - schedule_maker : 최종 제작한 스케쥴러 노드
 ### 음성 처리
-
-- 
+#### stt_pkg
+- gpt_agent : 다양한 GPT 모델을 우리 프로젝트 목적에 맞게 사용해서 요청에 대응하는 스케쥴을 생성하게 하는 노드
+- tts_pub : 태웅씨가 만든 tts_origin을 패키지화 & 특정 키워드에 맞는 음악을 재생하는 기능 추가
+- 그 외의 부분은 태웅씨가 작성한 패키지이다.  
 # ROS 프로젝트 개발일지
 ### 사전 준비
 - 원래 [Deepspeech stt 모델](https://github.com/sooftware/kospeech)을 이용하여 학습해 사용하려 했으나, 컴퓨팅 파워 부족으로 [이미 학습되어 있는 딥러닝 모델](https://github.com/openai/whisper)을 사용하기로 결정. 성능은 양호해보인다. 
