@@ -9,9 +9,10 @@
 ## 프로젝트 명
 ---
 ## 코드 설명
-#### schedule_maker :
-#### stt_pkg :
-#### yolo_pkg :
+#### schedule_maker : 
+#### stt_pkg : 
+#### yolo_pkg : 
+#### om_pkg : 
 ## 발표 자료
 - 발표 PPT
 ## 팀원 소개
