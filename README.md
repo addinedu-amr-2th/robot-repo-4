@@ -119,3 +119,5 @@ test 결과 fine tuning 후에는 옳바른 사용을 한다는 가정하에 학
 모델의 성능은 finetuing을 할 경우 압도적으로 증가하고, fewshot learning을 하면 더욱 압도적으로 증가한다고 한다.
 GPT4의 경우 모델부터 근본적으로 달라서 전문성이 다른 여러 LLM의 앙상블 같은 구조라고 한다.
 다른 ChatGPT 사용 논문들에서 GPT4 + fewshot learning을 사용하는 것으로 보아 성능은 압도적으로 보이나 GPT4의 API는 신청 후 통과 절차를 밟아야만 사용 가능하다. 우리 프로젝트 기간 내에는 절대 사용 불가
+- GPT3.5에 finetuning을 하는 것이 가장 이상적으로 보이나, ChatGPT 3.5와 4는 Openai에서 finetuning 엔드포인트를 열어주지 않는다.
+  
