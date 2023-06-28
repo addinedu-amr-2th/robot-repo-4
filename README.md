@@ -38,6 +38,7 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 
 그 결과 우리는 다음과 같이 사람과 친밀하게 상호작용하는 로봇을 만들 수 있었다.
 ![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/bf2a6e62-4831-43ac-bad3-9dc18b3c0750)
+![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/c0a09812-fd23-4f6f-84f5-5903df42e91b)
 
 
 ---
