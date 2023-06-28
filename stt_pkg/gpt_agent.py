@@ -5,7 +5,7 @@ from std_msgs.msg import String
 import re
 
 API_PATH = '/home/ane4/Downloads/api.txt'
-MODEL = gpt-3.5-turbo
+MODEL = 'gpt-3.5-turbo'
 USE_FEWSHOT = False
 
 class ChatGPT(Node):
