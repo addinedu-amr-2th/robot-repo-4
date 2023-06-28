@@ -36,6 +36,10 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 - Schedule Manager는 이를 하나씩 다른 기기들에게 명령하게되고, 이로서 사용자의 요청에 대응하는 복잡한 동작이 이루어지게 된다.
 ---
 
+그 결과 우리는 다음과 같이 사람과 친밀하게 상호작용하는 로봇을 만들 수 있었다.
+![Animation](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/bf2a6e62-4831-43ac-bad3-9dc18b3c0750)
+
+
 ---
 ## 의의
 
