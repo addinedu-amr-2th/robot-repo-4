@@ -9,13 +9,20 @@
 - stt_subscriber : 위의 코드에 Whispher 모델을 적용하여 음성을 재생하는 대신 transcribe하게 만든 노드. 동작 확인을 위해 특정 단어가 나올 경우 우리가 정의한 문법에 맞게 변환해서 발행하도록 했다.
 ### 스케쥴 메이커 초안
 #### action_maker
-- ChatGPT의 출력 스케쥴 텍스트를 parsing하여 단순하게 순차적으로 동작을 수행하는 스케쥴러 초안
+- action_maker : ChatGPT의 출력 스케쥴 텍스트를 parsing하여 단순하게 순차적으로 동작을 수행하는 스케쥴러 초안
+### 스케쥴 메이커
+#### schedule_maker
+- ch36_to_ch4, ch4_to_ch36 : 두 ROS DOMAIN ID 간 정보를 교환하는 중계노드
+- schedule_maker : 최종 제작한 스케쥴러 노드
+### 음성 처리
+
+- 
 # ROS 프로젝트 개발일지
 ### 사전 준비
 - 원래 [Deepspeech stt 모델](https://github.com/sooftware/kospeech)을 이용하여 학습해 사용하려 했으나, 컴퓨팅 파워 부족으로 [이미 학습되어 있는 딥러닝 모델](https://github.com/openai/whisper)을 사용하기로 결정. 성능은 양호해보인다. 
 - ChatGPT 사전 리서치 : 비용문제 때문에 연습용으로는 curie 모델을 fine-tuning해서 사용하고, 이후 시연시 davich 모델을 fine-tuning해서 사용하게 될 것으로 생각됨. 이를 위한 fine-tune 데이터셋은 어느정도 제작해둠(시나리오 추가 요구)
 - TTS 모델은 눈여겨봐둔 모델이 존재하나 다른 모델을 사용하게 될 것으로 생각됨
-- 기획서 작성 및 팀원 모집집
+- 기획서 작성 및 팀원 모집
 
 ### 2023.5.30
 - [audioROS](https://github.com/LCAV/audioROS) 패키지를 활용해서 오디오 퍼블리셔, 서브스크라이버 제작. 일정 시간 퍼블리셔가 구동하다 정지하는 현상 해결
