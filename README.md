@@ -18,7 +18,15 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 ---
 ![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/25b1b54c-73ec-4eae-bad2-941725adcc03)
 - 우리는 최적의 성능을 얻기 위해 위와 같은 기법들을 사용했다.
-- 
+- 왼쪽(ChatGPT)과 오른쪽(GPT3)을 따로 놓은 이유는 OpenAI에서 제공하는 엔드포인트가 다르고, 사용하는 데이터 형태도 다르며, 모델의 성향조차 다르기 때문이다.
+- ChatGPT의 경우 `system`을 통해 역할을 부여하면 이 역할을 지키려하는 역할극의 성향이 강했다.
+  이 모델은 논리적인 행동 시퀀스에 해당하는 아웃풋을 냈지만, 지정한 문법에서 자꾸 벗어나는 문제가 존재했다.
+- GPT 3의 경우, Few Shot Learning으로 몇 개의 예시를 들어주면, 해당 예시의 말투, 문법, 스타일을 따라하려는 경향이 강했다.
+  이 모델은 비교적 지정한 문법에서 벗어나지 않았으나, 논리성은 떨어지는 모습을 보였다.
+- 우리는 안정적인 시연을 위해 안정성을 중요시 했고, finetuning endpoint가 열려있는 GPT 3를 사용하게 됐다.
+---
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/1b09d285-7a48-4bc1-a114-fd63e38ba4dc)
+
 ## 의의
 
 
