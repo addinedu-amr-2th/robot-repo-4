@@ -1,5 +1,6 @@
 ## 프로젝트 소개
-![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/6ddb8631-cdef-4fba-96a8-c331b6a238a2)  
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/90dd1ab6-1b3f-4c26-9b3a-ec2bda80d337)
+
 거대 언어 모델 **ChatGPT**를 이용한 로봇 행동 제어 프로젝트  
 ## 시연 영상
 https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4d25-b1f7-6d03d8f8011c
