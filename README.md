@@ -34,7 +34,8 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 - 이렇게 얻어진 행동 시퀀스는 Schedule Manager에 의해 ChatGPT 모델이 판단한 우선도에 따라 기존 스케쥴의 전방/후방에 배치되게 되고, Schedule Manager는 이를 하나씩 꺼내어 하드웨어에 명령을 내리고, 이 명령이 수행된 후 성공 여부를 나타내는 신호를 받아 이를 통해 하나의 동작의 완료를 인식하고 다음 동작을 순차적으로 실행하여 일련의 동작이 수행될 수 있게 하였다.
 - 이론상 모든 복잡한 동작은 간단한 동작의 연속으로 구성되어 있으므로, 이는 ChatGPT가 사용자의 요구를 만족시키는 복잡한 동작들을 스스로 생성해냄을 의미한다.
 ---
-![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/c1d2967f-4e4f-4783-9bb9-acd19d5cab1d)
+![image](https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/b79602f0-b263-41f6-a762-df188c803995)
+
 - 위는 구체적인 동작의 예시이다.
 - 사용자가 목이 마르다는 요청을 넣게 되면, ChatGPT는 이를 해소하기 위해 우선도를 높음으로 설정한 뒤, 
   병을 찾기, 병을 바라봄, 앞으로 감, 물병을 잡음, 사람을 찾음, 사람을 바라봄, 앞으로 감, 병을 내려놓음, 행복을 표현함의 일련의 과정을 출력으로 내놓는다.
