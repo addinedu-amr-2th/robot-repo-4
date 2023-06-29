@@ -51,14 +51,14 @@ https://github.com/addinedu-amr-2th/robot-repo-4/assets/69943723/4dd73bd7-c1d2-4
 
 ## 코드 설명
 #### stt_pkg : 음성 처리 및 ChatGPT와 관련된 패키지 
-- audio_pub : 
-- audio_sub : 
-- stt_sub : 
-- tts_pub : 
-- gpt_agent : 
+- audio_pub : 마이크 입력 음성 데이터를 스트리밍, 송신하는 노드
+- audio_sub : 수신한 음성 데이터를 저장하여 재생하는 노드
+- stt_sub : 수신한 음성 데이터를 저장하여 google STT API로 텍스트로 바꾸고 송신하는 노드
+- tts_pub : 수신한 텍스트 데이터를 google TTS API로 음성으로 변경, 저장하고 재생하는 노드
+- gpt_agent : 입력된 유저 request prompt로부터 이를 만족시키는 일련의 행동 시퀀스 텍스트를 ChatGPT API를 이용해 만들어내고 송신하는 노드
 #### schedule_maker : 행동 시퀀스 스케쥴을 관리하고 로봇 구동부를 제어하는 패키지
-- ch36_to_ch4, ch4_to_ch36 : 
-- schedule_maker : 
+- ch36_to_ch4, ch4_to_ch36 : ROS DOMAIN ID가 다른 두 기기간 정보를 중계하는 노드
+- schedule_maker : gpt_agent 출력 시퀀스를 우선도에 따라 재배치하고 동작을 하나씩 꺼내서 실행시키는 노드
 #### yolo_pkg : YOLO 모델의 정보를 schedule_maker 및 로봇팔 제어부에 전달해주는 패키지
 - cam_pub : 
 - cam_sub : 
